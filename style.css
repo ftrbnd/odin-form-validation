@@ -12,6 +12,7 @@ body {
     padding: 8px;
     background-color: rgb(22, 185, 255);
     color: white;
+    font-family: Roboto, sans-serif;
 }
 
 form {
@@ -28,8 +29,74 @@ form h1 {
 
 div.inputs {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
     grid-template-columns: repeat(1, 1fr);
     gap: 8px;
     justify-items: end;
+}
+
+label {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    column-gap: 8px;
+
+    width: 450px;
+}
+
+label span:first-child {
+    grid-row: 1 / -1;
+    grid-column: 1;
+
+    justify-self: end;
+}
+
+/*  */
+body {
+    font: 1em sans-serif;
+    width: 200px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+p * {
+    display: block;
+}
+
+input {
+    appearance: none;
+
+    width: 100%;
+    border: 1px solid #333;
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 90%;
+
+    box-sizing: border-box;
+}
+
+input:invalid {
+    border-color: #900;
+    background-color: #fdd;
+}
+
+input:focus:invalid {
+    outline: none;
+}
+
+.error {
+    width: 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
 }
